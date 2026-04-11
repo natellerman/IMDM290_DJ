@@ -1,15 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Change_Pitch : MonoBehaviour
 {
     public float pitchValue = 1.0f;
     public AudioClip song;
+    public Slider slider;
     
     private AudioSource audioSource;
-    // Upper and lower bounds for pitch
-    private float low = 0.75f;
-    private float high = 1.25f;
-
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,9 +20,12 @@ public class Change_Pitch : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    // Setting the pitch to the value of the slider
     void Update()
     {
+        audioSource.pitch = slider.value;
         
     }
+
+
 }
