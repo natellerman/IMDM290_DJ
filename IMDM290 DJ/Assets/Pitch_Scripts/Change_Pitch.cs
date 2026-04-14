@@ -6,6 +6,7 @@ public class Change_Pitch : MonoBehaviour
     public float pitchValue = 1.0f;
     public AudioClip song;
     public Slider slider;
+    public Slider reverse;
     
     private AudioSource audioSource;
     
@@ -23,7 +24,7 @@ public class Change_Pitch : MonoBehaviour
     // Setting the pitch to the value of the slider
     void Update()
     {
-        audioSource.pitch = slider.value;
+        audioSource.pitch = slider.value * reverse.value;
         
     }
 
