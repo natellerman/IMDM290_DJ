@@ -26,24 +26,13 @@ public class VolumeControl : MonoBehaviour
         void ChangeVolume()
         {
             audioSource.volume = volumeSlider.value;
-            Debug.Log("Manually Changed Volume to: " + audioSource.volume);
+            //Debug.Log("Manually Changed Volume to: " + audioSource.volume);
         }
     }
 
-        void ChangeVolume()
-        {
-            audioSource.volume = volumeSlider.value;
-            Debug.Log("Manually Changed Volume to: " + audioSource.volume);
-        }
-
-    // // Update is called once per frame
-    // void Update()
-    //     {
-    //         if (volumeSlider != null && audioSource != null)
-    //         {
-    //             audioSource.volume = volumeSlider.value;
-    //             // This will print the volume to the console so you can see if it's changing
-    //             Debug.Log("Current Volume: " + audioSource.volume);
-    //         }
-    //     }
+    void ChangeVolume()
+    {
+        audioSource.volume = volumeSlider.value;
+        //Debug.Log("Manually Changed Volume to: " + audioSource.volume);
+    }
 }
