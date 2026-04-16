@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class Change_Pitch : MonoBehaviour
 {
     public float pitchValue = 1.0f;
-    public AudioClip song;
     public Slider slider;
     public Slider reverse;
     
@@ -15,7 +14,6 @@ public class Change_Pitch : MonoBehaviour
     {
         // Getting music
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = song;
         audioSource.loop = true;
 
 
