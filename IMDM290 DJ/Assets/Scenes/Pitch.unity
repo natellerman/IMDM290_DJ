@@ -1803,7 +1803,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Change_Pitch
   pitchValue: 1
-  song: {fileID: 8300000, guid: 2a55e9fede28ccf4ca5e9fceb75c0e12, type: 3}
   slider: {fileID: 550141560}
   reverse: {fileID: 529837622}
 --- !u!82 &1039024104
@@ -3537,7 +3536,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 2a55e9fede28ccf4ca5e9fceb75c0e12, type: 3}
+  m_Resource: {fileID: 8300000, guid: 85ea371b7c46248c6b32e2fdb2a0ccdc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3651,7 +3650,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Change_Pitch
   pitchValue: 1
-  song: {fileID: 8300000, guid: 2a55e9fede28ccf4ca5e9fceb75c0e12, type: 3}
   slider: {fileID: 791499238}
   reverse: {fileID: 2019272687}
 --- !u!1 &1977151146
