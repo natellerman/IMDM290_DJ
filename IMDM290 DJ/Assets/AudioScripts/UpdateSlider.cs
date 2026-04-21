@@ -15,7 +15,7 @@ public class UpdateSlider : MonoBehaviour
     void Update()
     {
         // Setting slider value to LEFT HAND Y position
-        slider.value = Mathf.Abs(mediapipe.pendingLeftHandPosition.y) ;
+        slider.value = Mathf.Abs( 1 - mediapipe.pendingLeftHandPosition.y) ;
         Debug.Log($"Left hand y: {mediapipe.pendingLeftHandPosition.y}");
         if(mediapipe.pendingLeftPinch)
         {
