@@ -20,12 +20,11 @@ public class UpdateSlider : MonoBehaviour
         // Setting slider
         if(pitchSlider)
         {
-            slider.value = Mathf.Abs(maxSlidervalue - mediapipe.pendingLeftHandPosition.y) ;
-            Debug.Log($"Left hand y: {mediapipe.pendingLeftHandPosition.y}");
+            slider.value = Mathf.Abs(maxSlidervalue - mediapipe.pendingLeftHandPosition.y);
         }
         else
         {
-            slider.value = Mathf.Abs(maxSlidervalue - mediapipe.pendingLeftHandPosition.x) ;
+            slider.value = Mathf.Abs(maxSlidervalue - mediapipe.pendingLeftHandPosition.x);
             Debug.Log($"Left hand x: {mediapipe.pendingLeftHandPosition.x}");
         }
        
