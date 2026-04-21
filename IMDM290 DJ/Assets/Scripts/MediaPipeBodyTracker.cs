@@ -13,11 +13,11 @@ public class MediaPipeBodyTracker : MonoBehaviour
     [SerializeField] private HolisticTrackingGraph graphRunner;
 
     [Header("Hand Data")]
-    [SerializeField] private Vector3 leftHandPosition;
-    [SerializeField] private bool leftHandPinch;
+    [SerializeField] public Vector3 leftHandPosition;
+    [SerializeField] public bool leftHandPinch;
     [SerializeField] private float leftThumbIndexDistance;
-    [SerializeField] private Vector3 rightHandPosition;
-    [SerializeField] private bool rightHandPinch;
+    [SerializeField] public Vector3 rightHandPosition;
+    [SerializeField] public bool rightHandPinch;
     [SerializeField] private float rightThumbIndexDistance;
 
     [Header("Body Data")]
@@ -46,12 +46,12 @@ public class MediaPipeBodyTracker : MonoBehaviour
     [SerializeField] private Color pinchColor = Color.yellow;
 
     private readonly object dataLock = new object();
-    private Vector3 pendingLeftHandPosition;
-    private Vector3 pendingRightHandPosition;
+    public Vector3 pendingLeftHandPosition;
+    public Vector3 pendingRightHandPosition;
     private Vector3 pendingTorsoPosition;
     private Vector3 pendingHeadPosition;
-    private bool pendingLeftPinch;
-    private bool pendingRightPinch;
+    public bool pendingLeftPinch;
+    public bool pendingRightPinch;
     private float pendingLeftThumbIndexDistance;
     private float pendingRightThumbIndexDistance;
     private bool leftHandTracked;
