@@ -5,7 +5,7 @@ using System.Text;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class LeftHandOscSender : MonoBehaviour
+public class OscSender : MonoBehaviour
 {
     [Header("Source")]
     [SerializeField] private MediaPipeBodyTracker tracker;
@@ -13,7 +13,7 @@ public class LeftHandOscSender : MonoBehaviour
     [Header("OSC Target")]
     [SerializeField] private string remoteHost = "127.0.0.1";
     [SerializeField] private int remotePort = 9000;
-    [SerializeField] private string address = "/lefthand";
+    [SerializeField] private string address = "/righthand";
 
     [Header("Send Settings")]
     [SerializeField] private bool sendWhenNotTracked = false;
@@ -44,12 +44,12 @@ public class LeftHandOscSender : MonoBehaviour
             return;
         }
 
-        if (!sendWhenNotTracked && !tracker.LeftHandTracked)
+        if (!sendWhenNotTracked && !tracker.RightHandTracked)
         {
             return;
         }
 
-        SendVector3(tracker.LeftHandPosition);
+        SendVector3(tracker.RightHandPosition);
     }
 
     private void OnDisable()
@@ -64,7 +64,7 @@ public class LeftHandOscSender : MonoBehaviour
 
         if (string.IsNullOrWhiteSpace(address))
         {
-            address = "/leftHandPosition";
+            address = "/righthand";
         }
         else if (!address.StartsWith("/"))
         {
@@ -94,7 +94,7 @@ public class LeftHandOscSender : MonoBehaviour
         }
         catch (Exception exception)
         {
-            Debug.LogWarning($"{nameof(LeftHandOscSender)} failed to connect to {remoteHost}:{remotePort}. {exception.Message}", this);
+            Debug.LogWarning($"{nameof(OscSender)} failed to connect to {remoteHost}:{remotePort}. {exception.Message}", this);
             DisposeClient();
         }
     }
@@ -126,12 +126,12 @@ public class LeftHandOscSender : MonoBehaviour
 
             if (verboseLogging)
             {
-                Debug.Log($"{nameof(LeftHandOscSender)} sent {address} {value}", this);
+                Debug.Log($"{nameof(OscSender)} sent {address} {value}", this);
             }
         }
         catch (Exception exception)
         {
-            Debug.LogWarning($"{nameof(LeftHandOscSender)} failed to send OSC packet. {exception.Message}", this);
+            Debug.LogWarning($"{nameof(OscSender)} failed to send OSC packet. {exception.Message}", this);
             DisposeClient();
         }
     }
