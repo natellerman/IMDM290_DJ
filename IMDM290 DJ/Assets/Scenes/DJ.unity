@@ -1589,8 +1589,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5729251f92944931bb11237cd3ed2e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PinchReverbController
-  reverbFilter: {fileID: 1010847537}
   mediaPipe: {fileID: 970606203}
+  dj: {fileID: 174771115}
   minDecay: 1
   maxDecay: 20
   minPinchDistance: 0.01
@@ -2641,8 +2641,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5729251f92944931bb11237cd3ed2e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PinchReverbController
-  reverbFilter: {fileID: 1898056732}
   mediaPipe: {fileID: 970606203}
+  dj: {fileID: 174771115}
   minDecay: 1
   maxDecay: 20
   minPinchDistance: 0.01
