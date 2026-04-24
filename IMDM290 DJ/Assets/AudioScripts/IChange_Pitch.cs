@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class IChange_Pitch : MonoBehaviour
 {
     public MediaPipeBodyTracker mediaPipe;
     public DJController dj;
+
+    public Slider pitchSlider;
 
     [Header("Pitch Settings")]
     public float minPitch = 0.5f;
@@ -25,7 +28,12 @@ public class IChange_Pitch : MonoBehaviour
         AudioSource audioSource = dj.GetActiveDeck();
 
         if (Keyboard.current.wKey.wasPressedThisFrame)
+        {
             isActive = !isActive;
+
+            if (pitchSlider)
+                pitchSlider.fillRect.GetComponent<Image>().color = isActive ? Color.yellow : Color.white;
+        }
 
         if (isActive && mediaPipe != null && mediaPipe.RightHandTracked)
         {
@@ -37,6 +45,11 @@ public class IChange_Pitch : MonoBehaviour
             currentPitch = Mathf.Lerp(currentPitch, targetPitch, Time.deltaTime * smoothSpeed);
 
             audioSource.pitch = currentPitch;
+
+            if (pitchSlider)
+            {
+                pitchSlider.value = t;
+            }
         }
     }
 }

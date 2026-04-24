@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using System.Collections;
 
 public class DJController : MonoBehaviour
@@ -19,6 +20,7 @@ public class DJController : MonoBehaviour
 
         deckA.Play();
         deckB.Play();
+
     }
 
     void Update()
