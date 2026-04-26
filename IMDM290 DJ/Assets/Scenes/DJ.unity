@@ -1354,15 +1354,15 @@ RectTransform:
   m_GameObject: {fileID: 959211082}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.280075, y: 4.2120676, z: 4.2120676}
+  m_LocalScale: {x: 3.1300616, y: 3.0803273, z: 3.0803273}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2086380273}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.011458334, y: 0.038222224}
   m_AnchorMax: {x: 0.9856875, y: 0.96400005}
-  m_AnchoredPosition: {x: -90, y: 232}
-  m_SizeDelta: {x: -93.325806, y: 53.551086}
+  m_AnchoredPosition: {x: -880, y: 21}
+  m_SizeDelta: {x: -99.6616, y: 58.4222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &959211084
 MonoBehaviour:
@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 490005882, guid: 134a1a83392b85f4bb0842329ee15ada, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4342e6a439129ff4d8e210f6984784f0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1929,14 +1929,14 @@ RectTransform:
   m_GameObject: {fileID: 1317926515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5888659, y: 3.3785312, z: 2.1318521}
+  m_LocalScale: {x: 1.62092, y: 2.5905225, z: 1.6346189}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1359791286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.06939584, y: 0.89462966}
   m_AnchorMax: {x: 0.06939584, y: 0.89462966}
-  m_AnchoredPosition: {x: 52, y: -1}
+  m_AnchoredPosition: {x: 55, y: 14}
   m_SizeDelta: {x: 187.3351, y: 55.0036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1317926517
@@ -1959,7 +1959,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press 'E' to show Controls!
+  m_text: Press 'E' to hide/show Controls!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2024,7 +2024,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -2.8995478, y: 0, z: 0, w: 0}
+  m_margin: {x: -2.8995478, y: 0, z: 0, w: -35.503048}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
