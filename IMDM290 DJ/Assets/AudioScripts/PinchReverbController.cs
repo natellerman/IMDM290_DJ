@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem; // Input System
+using UnityEngine.UI;
 
 public class PinchReverbController : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class PinchReverbController : MonoBehaviour
 
     // MediaPipe script
     public MediaPipeBodyTracker mediaPipe;
+
+    public Slider reverbSlider;
 
     [Header("Reverb Settings")]
     public float minDecay = 1.0f;
@@ -24,12 +27,17 @@ public class PinchReverbController : MonoBehaviour
 
     void Update()
     {
-        
+
         if (Keyboard.current.dKey.wasPressedThisFrame)
-            isActive = true;
+        {
+            isActive = !isActive;
+
+            if (reverbSlider)
+                reverbSlider.fillRect.GetComponent<Image>().color = isActive ? Color.magenta : Color.white;
+        }
 
         if (Keyboard.current.dKey.wasReleasedThisFrame)
-            isActive = false;
+                    isActive = false;
 
         if (isActive && mediaPipe != null && mediaPipe.RightHandTracked)
         {
@@ -45,6 +53,8 @@ public class PinchReverbController : MonoBehaviour
             currentDecay = Mathf.Lerp(currentDecay, targetDecay, Time.deltaTime * smoothSpeed);
 
             reverbFilter.decayTime = currentDecay;
+
+            if (reverbSlider) reverbSlider.value = 1f - t;
         }
     }
 }
