@@ -33,7 +33,7 @@ public class PinchReverbController : MonoBehaviour
             isActive = !isActive;
 
             if (reverbSlider)
-                reverbSlider.fillRect.GetComponent<Image>().color = isActive ? Color.magenta : Color.white;
+                reverbSlider.fillRect.GetComponent<Image>().color = isActive ? Color.orange : Color.white;
         }
 
         if (Keyboard.current.dKey.wasReleasedThisFrame)
