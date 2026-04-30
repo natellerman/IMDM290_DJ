@@ -2459,7 +2459,7 @@ MonoBehaviour:
   tracker: {fileID: 970606203}
   remoteHost: 127.0.0.1
   remotePort: 9000
-  address: /lefthand
+  address: /righthand
   sendWhenNotTracked: 0
   sendInterval: 0.02
   verboseLogging: 0
